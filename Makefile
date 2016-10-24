@@ -2,8 +2,8 @@ PROJECT=apns
 
 CONFIG?=priv/app.config
 
-DEPS = jiffy sync
-dep_jiffy = git https://github.com/davisp/jiffy 0.14.3
+DEPS = jsx sync
+dep_jsx = git ssh://git@192.168.31.222:8022/erlang/apns4erl.git branch_jsx
 dep_sync = git https://github.com/rustyio/sync.git 9c78e7b
 
 TEST_DEPS = mock_apns
