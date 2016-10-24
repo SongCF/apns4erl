@@ -21,4 +21,14 @@ priv/cert.pem
 .awconfig
 .erlang.mk.packages.v2
 logs/
+ebin
+deps
+.rebar
+erl_crash.dump
+log
+*.iml
+.idea
+.eunit
+_build/
+_rel/
 

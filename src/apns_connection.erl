@@ -325,8 +325,8 @@ code_change(_OldVsn, State, _Extra) ->  {ok, State}.
 %% Private functions
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 build_payload(Params, Extra, Content_Available) ->
-  jiffy:encode(
-    {[{<<"aps">>, do_build_payload(Params, Content_Available)} | Extra]}).
+  jsx:encode(
+    [{<<"aps">>, do_build_payload(Params, Content_Available)} | Extra]).
 
 do_build_payload(Params, Content_Available) when Content_Available ->
   do_build_payload(Params, [{<<"content-available">>, 1}]);
@@ -371,7 +371,7 @@ do_build_payload([{Key, Value} | Params], Payload) ->
       do_build_payload(Params, Payload)
   end;
 do_build_payload([], Payload) ->
-  {Payload}.
+  Payload.
 
 -spec send_payload(tuple(), binary(), non_neg_integer(),
     binary(), binary(), integer()) ->   ok | {error, term()}.
