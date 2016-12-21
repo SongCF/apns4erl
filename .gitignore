@@ -21,4 +21,5 @@ priv/cert.pem
 .awconfig
 .erlang.mk.packages.v2
 logs/
-
+.idea/
+*.iml
