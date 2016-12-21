@@ -2,7 +2,7 @@ CHANGELOG
 ========
 2016-10
 
-更换apns4erl(v1.0.6)的json库为jsx(原版本为jiffy),更换后的代码位于jsx分支。
+更换apns4erl(v1.0.6)的json库为jsx(原版本为jiffy),更换后的代码分支`jsx`,标签`1.0.6jsx`。
 
 
 ---
